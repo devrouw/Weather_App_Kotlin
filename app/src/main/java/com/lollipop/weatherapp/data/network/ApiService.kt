@@ -1,6 +1,7 @@
 package com.lollipop.weatherapp.data.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import com.lollipop.weatherapp.BuildConfig
 import com.lollipop.weatherapp.data.db.entity.WeatherResponse
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
@@ -27,7 +28,7 @@ interface ApiService {
                 val url = chain.request()
                     .url()
                     .newBuilder()
-                    .addQueryParameter("appid","fdf871cedaf3413c6a23230372c30a02")
+                    .addQueryParameter("appid",BuildConfig.API_KEY)
                     .build()
                 val request = chain.request()
                     .newBuilder()

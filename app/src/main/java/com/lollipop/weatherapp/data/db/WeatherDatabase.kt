@@ -7,7 +7,7 @@ import com.lollipop.weatherapp.data.db.entity.WeatherResponse
 
 @Database(
     entities = [WeatherResponse::class],
-    version = 12
+    version = 13
 )
 @TypeConverters(
     WeatherConverter::class
